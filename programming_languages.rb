@@ -1,3 +1,4 @@
+require 'pry'
 def languages()
   languages = {
   :oo => {
@@ -47,6 +48,7 @@ def reformat_languages(languages)
         style = [style]
       end
       new_hash[language] = {type: type[:type], style: style}
+      binding.pry
     end
   end
   new_hash
