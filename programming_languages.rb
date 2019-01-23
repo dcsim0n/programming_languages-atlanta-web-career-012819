@@ -45,6 +45,7 @@ def reformat_languages(languages)
         style = new_hash[language][:style] << style
       else
         style = [style]
+      end
       new_hash[language] = {type: type[:type], style: style}
     end
   end
