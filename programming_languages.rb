@@ -43,11 +43,11 @@ def reformat_languages(languages)
   languages.each do |style, name|
     name.each do |language, type|
       if new_hash[language] != nil
-        style = new_hash[language][:style] << style
+        style_array = new_hash[language][:style] << style
       else
-        style = [style]
+        style_array = [style]
       end
-      new_hash[language] = {type: type[:type], style: style}
+      new_hash[language] = {type: type[:type], style: style_array}
       binding.pry
     end
   end
